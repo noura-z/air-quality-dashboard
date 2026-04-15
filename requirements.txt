@@ -7,6 +7,5 @@ streamlit
 plotly
 folium
 streamlit-folium
-tensorflow
 pyarrow
 requests
