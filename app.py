@@ -11,6 +11,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import warnings
+try:
+    import tensorflow as tf
+    LSTM_AVAILABLE = True
+except ImportError:
+    LSTM_AVAILABLE = False
+if not LSTM_AVAILABLE:
+    st.warning("LSTM model unavailable in this environment. Showing XGBoost forecast.")
 warnings.filterwarnings("ignore")
 
 # ─── Page Configuration ─────────────────────────────────────────────────────
