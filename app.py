@@ -16,8 +16,7 @@ try:
     LSTM_AVAILABLE = True
 except ImportError:
     LSTM_AVAILABLE = False
-if not LSTM_AVAILABLE:
-    st.warning("LSTM model unavailable in this environment. Showing XGBoost forecast.")
+
 warnings.filterwarnings("ignore")
 
 # ─── Page Configuration ─────────────────────────────────────────────────────
